@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es5",
+      "es6",
+      "dom",
+      "ES2015",
+      "ES2017",
+      "ES2018",
+      "ES2021"
+    ],
+    "rootDirs": ["./src"],
+    "target": "ES2018",
+    "allowJs": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./build",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "typeRoots" : ["./node_modules/@types"]
+  }
+}

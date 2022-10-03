@@ -1,0 +1,28 @@
+import { DataSource, DataSourceOptions } from 'typeorm';
+
+export const dataSource = new DataSource({
+    migrationsTableName: 'migrations',
+    type: "postgres",
+    host: "",
+    port: 5432,
+    username: "",
+    password: "",
+    database: "",
+    synchronize: false,
+    logging: false,
+    entities: [
+        "build/src/entity/*.{js,ts}",
+        "src/entity/*.{js,ts}"
+    ],
+    migrations: [
+        "src/migration/**/*.{js,ts}"
+    ],
+    subscribers: [
+        "src/subscriber/**/*.{js,ts}"
+    ],
+    cli: {
+        "entitiesDir": "src/entity",
+        "migrationsDir": "src/migration",
+        "subscribersDir": "src/subscriber"
+    }
+} as DataSourceOptions);
